@@ -10,7 +10,7 @@ people = [
     {"name": "Victor Wong", "age": 74},
 ]
 
-sorted_by_name = sorted(people, key=lambda d: d["name"].lower())
+sorted_by_name = None
 
 assert sorted_by_name == [
     {"name": "Ariana Richards", "age": 40},
@@ -25,9 +25,7 @@ assert sorted_by_name == [
 # `<NAME> is <AGE> years old.` where the `<NAME>` and `<AGE>` values are from
 # the dictionaries.
 
-name_declarations = list(
-    map(lambda d: f"{d['name']} is {d['age']} years old", sorted_by_name)
-)
+name_declarations = None
 
 assert name_declarations == [
     "Ariana Richards is 40 years old",
@@ -41,9 +39,7 @@ assert name_declarations == [
 # new list called `under_seventy` that only contains the dictionaries where the
 # 'age' key is less than 70, sorting the list by age.
 
-under_seventy = sorted(
-    filter(lambda d: d["age"] < 70, sorted_by_name), key=lambda d: d["age"]
-)
+under_seventy = None
 
 assert under_seventy == [
     {"name": "Ariana Richards", "age": 40},
